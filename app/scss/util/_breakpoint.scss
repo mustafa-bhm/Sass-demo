@@ -1,0 +1,37 @@
+// max  700 px => for mobile
+// max 900 px => for tablets
+// max 1440 px => small monitor
+// more than 1440 => large monitor
+
+// sass map
+$breakpoints-up: (
+  // 700 / 16
+  "medium": 43.75em,
+  // 900 / 16
+  "large": 56.25em,
+  // 1440 / 16
+  "xlarge": 90
+);
+
+// mixins
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size )) {
+    @content;
+  }
+}
+
+// min 699.98 px mobile
+// min 899.98 px => tablet
+// min 1439.98 px => pc monitor
+
+$breakpoints-down: (
+  "small": 43.7485em,
+  "medium": 56.24875em,
+  "large": 89.99875em,
+);
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
