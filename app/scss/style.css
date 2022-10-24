@@ -49,6 +49,10 @@ a:active {
   --text-color: rgb(251, 249, 249);
 }
 
+.grid__widget--green, .grid__widget--magenta {
+  padding: 1rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -73,11 +77,14 @@ a:active {
 .grid__main {
   background-color: blue;
 }
-.grid__sidebar {
-  background-color: magenta;
-}
 @media (max-width: 56.24875em) {
   .grid__sidebar {
     text-align: center;
   }
+}
+.grid__widget--magenta {
+  background-color: magenta;
+}
+.grid__widget--green {
+  background-color: green;
 }/*# sourceMappingURL=style.css.map */

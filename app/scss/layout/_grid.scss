@@ -1,5 +1,10 @@
 @use "../util" as u;
 
+// sass placeholder
+%widget {
+  padding: u.rem(16);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -27,9 +32,18 @@
     background-color: blue;
   }
   &__sidebar {
-    background-color: magenta;
     @include u.breakpoint-down(medium) {
       text-align: center;
+    }
+  }
+  &__widget {
+    &--magenta {
+      @extend %widget;
+      background-color: magenta;
+    }
+    &--green {
+      @extend %widget;
+      background-color: green;
     }
   }
 }
